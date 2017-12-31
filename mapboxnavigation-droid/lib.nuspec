@@ -3,12 +3,12 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.MapboxNavigation.Droid</id>
-        <version>0.7.1</version>
+        <version>0.8.0</version>
         <authors>NAXAM</authors>
         <owners>NAXAM COMPANY LIMITED</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Mapbox Navigation for Android</title>
-        <summary>Mapbox Navigation 0.7.1</summary>
+        <summary>Mapbox Navigation 0.8.0</summary>
         <description>Xamarin.Android binding Library - Mapbox Navigation</description>
         <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
