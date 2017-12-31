@@ -273,7 +273,6 @@ namespace NavigationQs
         {
             NavigationViewOptions.Builder optionsBuilder = NavigationViewOptions
                 .InvokeBuilder()
-                .UnitType(NavigationUnitType.TypeImperial)
                 .ShouldSimulateRoute(shouldSimulateRoute);
 
             if (route != null)

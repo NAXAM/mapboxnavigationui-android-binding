@@ -6,11 +6,6 @@ using ARE = Android.Runtime.Extensions;
 using Android.OS;
 using Java.Lang;
 
-namespace Com.Mapbox.Services.Android.Navigation.UI.V5.Feedback
-{
-
-}
-
 namespace Com.Mapbox.Services.Android.Navigation.UI.V5.Voice.Polly
 {
     partial class InstructionTask : AsyncTask

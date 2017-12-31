@@ -232,7 +232,7 @@ namespace NavigationQs
         public void OnProgressChange(Location location, RouteProgress routeProgress)
         {
             locationLayerPlugin.ForceLocationUpdate(location);
-            System.Diagnostics.Debug.WriteLine("onProgressChange: fraction of route traveled: %f", routeProgress.FractionTraveled());
+            System.Diagnostics.Debug.WriteLine("onProgressChange: fraction of route traveled: {0}", routeProgress.FractionTraveled());
         }
 
         /*
@@ -290,6 +290,12 @@ namespace NavigationQs
         {
             base.OnSaveInstanceState(outState);
             mapView.OnSaveInstanceState(outState);
+        }
+
+        public void OnMilestoneEvent(RouteProgress p0, string p1, Milestone p2)
+        {
+            System.Diagnostics.Debug.WriteLine("Milestone Event Occurred with id: {0}", p2.Identifier);
+            System.Diagnostics.Debug.WriteLine("Voice instruction: {0}", p1);
         }
 
         class BeginRouteInstruction : IInstruction

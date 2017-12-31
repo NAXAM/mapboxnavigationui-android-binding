@@ -313,5 +313,10 @@ namespace NavigationQs
             navigation.RemoveProgressChangeListener(this);
             navigation.OnDestroy();
         }
+
+        public void OnMilestoneEvent(RouteProgress p0, string p1, Milestone p2)
+        {
+            System.Diagnostics.Debug.WriteLine("onMilestoneEvent - Current Instruction: " + p1);
+        }
     }
 }
