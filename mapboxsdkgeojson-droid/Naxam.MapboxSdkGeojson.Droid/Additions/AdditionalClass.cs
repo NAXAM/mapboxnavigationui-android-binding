@@ -69,7 +69,7 @@ namespace Com.Mapbox.Geojson
     {
         global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
         {
-            return Android.Runtime.JavaCollection<Point>.FromArray<Point>(Coordinates().ToArray()); 
+            return Android.Runtime.JavaCollection<Point>.FromArray<Point>(Coordinates().ToArray());
         }
     }
 
@@ -111,4 +111,20 @@ namespace Com.Mapbox.Geojson
         }
     }
 
+}
+
+namespace Com.Mapbox.Geojson.Gson
+{
+    partial class GeometryTypeAdapter
+    {
+        public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+        {
+            return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadGeometry(p0));
+        }
+
+        public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+        {
+            Write(p0, p1 as Com.Mapbox.Geojson.IGeometry);
+        }
+    }
 }

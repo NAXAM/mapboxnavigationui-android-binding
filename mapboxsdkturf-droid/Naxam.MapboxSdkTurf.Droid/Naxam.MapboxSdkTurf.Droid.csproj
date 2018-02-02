@@ -56,10 +56,10 @@
       <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.3.0.2\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.MapboxSdkCore.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.0.0-beta1\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
+      <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.MapboxSdkGeojson.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkGeojson.Droid.3.0.0-beta1\lib\MonoAndroid10\Naxam.MapboxSdkGeojson.Droid.dll</HintPath>
+      <HintPath>..\packages\Naxam.MapboxSdkGeojson.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkGeojson.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -78,7 +78,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\mapbox-sdk-turf-3.0.0-beta.1.jar" />
+    <EmbeddedJar Include="Jars\mapbox-sdk-turf-3.0.0-beta.2.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

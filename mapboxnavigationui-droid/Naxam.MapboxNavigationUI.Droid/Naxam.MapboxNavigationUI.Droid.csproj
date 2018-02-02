@@ -131,15 +131,6 @@
     <Reference Include="Naxam.Retrofit2.ConvertGson.Droid">
       <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.3.0.2\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Naxam.MapboxSdkCore.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.0.0-beta1\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Naxam.MapboxSdkGeojson.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkGeojson.Droid.3.0.0-beta1\lib\MonoAndroid10\Naxam.MapboxSdkGeojson.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Naxam.MapboxSdkServices.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkServices.Droid.3.0.0-beta1\lib\MonoAndroid10\Naxam.MapboxSdkServices.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Xbindings.AWSSdkCore.Droid">
       <HintPath>..\packages\Xbindings.AWSSdkCore.Droid.2.3.8\lib\Xamarin.Android10\Xbindings.AWSSdkCore.Droid.dll</HintPath>
     </Reference>
@@ -154,9 +145,6 @@
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.v7.CardView.dll</HintPath>
-    </Reference>
-    <Reference Include="Naxam.MapboxSdkTurf.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkTurf.Droid.3.0.0-beta1\lib\MonoAndroid10\Naxam.MapboxSdkTurf.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.MapboxServices.Droid">
       <HintPath>..\packages\Naxam.Mapbox.Services.Droid.2.2.9.1\lib\MonoAndroid10\Naxam.MapboxServices.Droid.dll</HintPath>
@@ -173,11 +161,29 @@
     <Reference Include="Xamarin.Android.Arch.Core.Runtime">
       <HintPath>..\packages\Xamarin.Android.Arch.Core.Runtime.1.0.0\lib\MonoAndroid10\Xamarin.Android.Arch.Core.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Naxam.Mapbox.Droid">
-      <HintPath>..\packages\Naxam.Mapbox.Droid.5.3.0\lib\MonoAndroid10\Naxam.Mapbox.Droid.dll</HintPath>
+    <Reference Include="Naxam.MapboxSdkCore.Droid">
+      <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.MapboxSdkGeojson.Droid">
+      <HintPath>..\packages\Naxam.MapboxSdkGeojson.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkGeojson.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.MapboxSdkServices.Droid">
+      <HintPath>..\packages\Naxam.MapboxSdkServices.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkServices.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.MapboxSdkTurf.Droid">
+      <HintPath>..\packages\Naxam.MapboxSdkTurf.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkTurf.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.MapboxNavigation.Droid">
-      <HintPath>..\packages\Naxam.MapboxNavigation.Droid.0.8.0\lib\MonoAndroid10\Naxam.MapboxNavigation.Droid.dll</HintPath>
+      <HintPath>..\packages\Naxam.MapboxNavigation.Droid.0.9.0\lib\MonoAndroid10\Naxam.MapboxNavigation.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.Mapbox.Droid">
+      <HintPath>..\packages\Naxam.Mapbox.Droid.5.3.2\lib\MonoAndroid10\Naxam.Mapbox.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.4.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.Picasso">
+      <HintPath>..\packages\Square.Picasso.2.5.2.1\lib\MonoAndroid\Square.Picasso.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -195,7 +201,7 @@
     <TransformFile Include="Transforms\Metadata.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\mapbox-android-navigation-ui-0.8.0.aar" />
+    <LibraryProjectZip Include="Jars\mapbox-android-navigation-ui-0.9.0.aar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />

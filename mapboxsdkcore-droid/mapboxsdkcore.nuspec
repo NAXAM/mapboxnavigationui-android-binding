@@ -3,12 +3,12 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.MapboxSdkCore.Droid</id>
-        <version>3.0.0-beta1</version>
+        <version>3.0.0.2</version>
         <authors>NAXAM</authors>
         <owners>NAXAM COMPANY LIMITED</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Mapbox SdkCore for Android</title>
-        <summary>Mapbox SdkCore 3.0.0-beta1</summary>
+        <summary>Mapbox SdkCore 3.0.0-beta2</summary>
         <description>Xamarin.Android binding Library - Mapbox SdkCore</description>
         <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>

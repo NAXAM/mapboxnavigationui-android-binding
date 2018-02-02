@@ -3,12 +3,12 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.MapboxSdkGeojson.Droid</id>
-        <version>3.0.0-beta1</version>
+        <version>3.0.0.2</version>
         <authors>NAXAM</authors>
         <owners>NAXAM COMPANY LIMITED</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Mapbox SdkGeojson for Android</title>
-        <summary>Mapbox SdkGeojson 3.0.0-beta1</summary>
+        <summary>Mapbox SdkGeojson 3.0.0-beta2</summary>
         <description>Xamarin.Android binding Library - Mapbox SdkGeojson</description>
         <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
@@ -16,7 +16,7 @@
         <copyright>Copyright (c) 2017 NAXAM</copyright>
         <tags>xamarin, Xamarin.Android, Mapbox, mapbox-sdk-core, mapboxsdkcore</tags>
         <dependencies>
-            <dependency id="Naxam.MapboxSdkCore.Droid" version="3.0.0-beta1" />
+            <dependency id="Naxam.MapboxSdkCore.Droid" version="3.0.0.2" />
         </dependencies>
     </metadata>
     <files>

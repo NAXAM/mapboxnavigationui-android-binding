@@ -10,7 +10,7 @@ using Android.App;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NAXAM CO,LTD.")]
 [assembly: AssemblyProduct("XBindings")]
-[assembly: AssemblyCopyright("Copyright (c) 2017 NAXAM")]
+[assembly: AssemblyCopyright("Copyright (c) 2017-present NAXAM")]
 [assembly: AssemblyTrademark("NAXAM")]
 [assembly: AssemblyCulture("")]
 
@@ -18,7 +18,7 @@ using Android.App;
 // The form "{Major}.{Minor}.*" will automatically update the build and revision,
 // and "{Major}.{Minor}.{Build}.*" will update just the revision.
 
-[assembly: AssemblyVersion("0.8.0")]
+[assembly: AssemblyVersion("0.9.0")]
 
 // The following attributes are used to specify the signing key for the assembly, 
 // if desired. See the Mono documentation for more information about signing.

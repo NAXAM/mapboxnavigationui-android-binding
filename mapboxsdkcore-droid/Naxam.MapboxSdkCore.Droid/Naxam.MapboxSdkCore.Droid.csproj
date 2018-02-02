@@ -38,9 +38,6 @@
       <HintPath>..\packages\GoogleGson.2.8.1\lib\MonoAndroid\GoogleGson.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
-    <Reference Include="Naxam.Retrofit2.ConvertGson.Droid, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.3.0.1\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.9.1.1\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
     </Reference>
@@ -55,6 +52,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="Naxam.Retrofit2.ConvertGson.Droid">
+      <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.3.0.2\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,7 +72,7 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\mapbox-sdk-core-3.0.0-beta.1.jar" />
+    <EmbeddedJar Include="Jars\mapbox-sdk-core-3.0.0-beta.2.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

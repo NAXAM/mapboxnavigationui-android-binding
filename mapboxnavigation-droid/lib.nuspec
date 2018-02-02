@@ -3,21 +3,21 @@
     <metadata>
         <!-- Required elements-->
         <id>Naxam.MapboxNavigation.Droid</id>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <authors>NAXAM</authors>
         <owners>NAXAM COMPANY LIMITED</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Mapbox Navigation for Android</title>
-        <summary>Mapbox Navigation 0.8.0</summary>
+        <summary>Mapbox Navigation 0.9.0</summary>
         <description>Xamarin.Android binding Library - Mapbox Navigation</description>
         <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>https://github.com/NAXAM/mapboxnavigation-android-binding</projectUrl>
-        <copyright>Copyright (c) 2017 NAXAM</copyright>
+        <copyright>Copyright (c) 2017-present NAXAM</copyright>
         <tags>xamarin, Xamarin.Android, Mapbox, mapbox-navigation, mapboxnavigation</tags>
         <dependencies>
-            <dependency id="Naxam.MapboxSdkServices.Droid" version="3.0.0-beta1" />
-            <dependency id="Naxam.MapboxSdkTurf.Droid" version="3.0.0-beta1" />
+            <dependency id="Naxam.MapboxSdkServices.Droid" version="3.0.0.2" />
+            <dependency id="Naxam.MapboxSdkTurf.Droid" version="3.0.0.2" />
             <dependency id="Naxam.Mapbox.Services.Droid" version="2.2.9.1" />
         </dependencies>
     </metadata>
