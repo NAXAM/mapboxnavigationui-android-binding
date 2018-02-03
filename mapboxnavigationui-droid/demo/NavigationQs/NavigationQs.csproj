@@ -58,9 +58,6 @@
     <Reference Include="Square.OkHttp3">
       <HintPath>..\..\packages\Square.OkHttp3.3.8.1\lib\MonoAndroid\Square.OkHttp3.dll</HintPath>
     </Reference>
-    <Reference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor">
-      <HintPath>..\..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.9.1.1\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
-    </Reference>
     <Reference Include="Square.Retrofit2">
       <HintPath>..\..\packages\Square.Retrofit2.2.3.0\lib\MonoAndroid\Square.Retrofit2.dll</HintPath>
     </Reference>
@@ -193,6 +190,9 @@
     <Reference Include="Naxam.Mapbox.Droid">
       <HintPath>..\..\packages\Naxam.Mapbox.Droid.5.3.2\lib\MonoAndroid10\Naxam.Mapbox.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor">
+      <HintPath>..\..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.9.1.2\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomNavigationNotification.cs" />
@@ -208,6 +208,7 @@
     <Compile Include="RerouteActivity.cs" />
     <Compile Include="NavigationMapRouteActivity.cs" />
     <Compile Include="WaypointNavigationActivity.cs" />
+    <Compile Include="OptimizedTripsNavigationActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
