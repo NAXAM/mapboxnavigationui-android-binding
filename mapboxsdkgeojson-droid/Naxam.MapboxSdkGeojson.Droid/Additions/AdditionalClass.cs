@@ -63,55 +63,6 @@ namespace Com.Mapbox.Geojson.Gson
 
 
 }
-namespace Com.Mapbox.Geojson
-{
-    public abstract partial class LineString : IGeometry
-    {
-        global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
-        {
-            return Android.Runtime.JavaCollection<Point>.FromArray<Point>(Coordinates().ToArray());
-        }
-    }
-
-    public abstract partial class MultiPoint : IGeometry
-    {
-        global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
-        {
-            return Android.Runtime.JavaCollection<Point>.FromArray<Point>(Coordinates().ToArray());
-        }
-    }
-
-    public abstract partial class MultiLineString : IGeometry
-    {
-        global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
-        {
-            return Android.Runtime.JavaCollection<JavaCollection<Point>>.FromArray<IList<Point>>(Coordinates().ToArray());
-        }
-    }
-
-    public abstract partial class MultiPolygon : IGeometry
-    {
-        global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
-        {
-            return Android.Runtime.JavaCollection<JavaCollection<JavaCollection<Point>>>.FromArray<IList<IList<Point>>>(Coordinates().ToArray());
-        }
-    }
-    public abstract partial class Point : IGeometry
-    {
-        global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
-        {
-            return Android.Runtime.JavaCollection<Double>.FromArray<Java.Lang.Double>(Coordinates().ToArray());
-        }
-    }
-    public abstract partial class Polygon : IGeometry
-    {
-        global::Java.Lang.Object global::Com.Mapbox.Geojson.IGeometry.Coordinates()
-        {
-            return Android.Runtime.JavaCollection<JavaCollection<Point>>.FromArray<IList<Point>>(Coordinates().ToArray());
-        }
-    }
-
-}
 
 namespace Com.Mapbox.Geojson.Gson
 {
@@ -125,6 +76,76 @@ namespace Com.Mapbox.Geojson.Gson
         public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
         {
             Write(p0, p1 as Com.Mapbox.Geojson.IGeometry);
+        }
+    }
+}
+
+namespace Com.Mapbox.Geojson {
+
+
+    abstract partial class MultiLineString : ICoordinateContainer
+    {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var coords = Coordinates().ToArray();
+            var jlist = Android.Runtime.JavaList.FromArray(coords);
+
+            return jlist;
+        }
+    }
+
+	partial class LineString : ICoordinateContainer
+    {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var coords = Coordinates().ToArray();
+            var jlist = Android.Runtime.JavaList.FromArray(coords);
+
+            return jlist;
+        }
+	}
+
+	partial class MultiPoint : ICoordinateContainer
+    {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var coords = Coordinates().ToArray();
+            var jlist = Android.Runtime.JavaList.FromArray(coords);
+
+            return jlist;
+        }
+	}
+
+	partial class Polygon : ICoordinateContainer
+    {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var coords = Coordinates().ToArray();
+            var jlist = Android.Runtime.JavaList.FromArray(coords);
+
+            return jlist;
+        }
+	}
+
+	partial class MultiPolygon : ICoordinateContainer
+    {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var coords = Coordinates().ToArray();
+            var jlist = Android.Runtime.JavaList.FromArray(coords);
+
+            return jlist;
+        }
+	}
+
+	partial class Point : ICoordinateContainer
+    {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var coords = Coordinates().ToArray();
+            var jlist = Android.Runtime.JavaList.FromArray(coords);
+
+            return jlist;
         }
     }
 }

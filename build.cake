@@ -120,7 +120,7 @@ var artifacts = new [] {
         },
         SolutionPath = "./mapboxnavigationui-droid/mapboxnavigationui-droid.sln",
         AssemblyInfoPath = "./mapboxnavigationui-droid/Naxam.MapboxNavigationUI.Droid/Properties/AssemblyInfo.cs",
-        NuspecPath = "./mapboxnavigationui-droid/mapboxnavigation-droid/lib.nuspec",
+        NuspecPath = "./mapboxnavigationui-droid/lib.nuspec",
         DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-navigation-ui/{0}/mapbox-android-navigation-ui-{0}.aar",
         JarPath = "./mapboxnavigationui-droid/Naxam.MapboxNavigationUI.Droid/Jars/mapbox-android-navigation-ui.aar",
         Dependencies = new NuSpecDependency[] {
@@ -160,6 +160,10 @@ var artifacts = new [] {
                 Id = "Xbindings.AWSSdkPolly.Droid",
                 Version = "2.3.8"
             },
+            new NuSpecDependency {
+                Id="Xbindings.MapboxLocationLayer.Droid",
+                Version="0.4.0.1"                
+            }
         }
     },
 };
@@ -211,7 +215,7 @@ Task("Pack")
         NuGetRestore(artifact.SolutionPath);
         MSBuild(artifact.SolutionPath, settings => settings.SetConfiguration(configuration));
         NuGetPack(artifact.NuspecPath, new NuGetPackSettings {
-            Version = VERSION+NUGET_SUFIX,
+            Version = artifact.Version,
             Dependencies = artifact.Dependencies,
             ReleaseNotes = artifact.ReleaseNotes,
             OutputDirectory = "./nugets"

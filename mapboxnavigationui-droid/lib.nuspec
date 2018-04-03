@@ -9,7 +9,6 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <title>Naxam - Mapbox NavigationUI for Android</title>
         <summary>Naxam - Mapbox NavigationUI for Android</summary>
-        <releaseNotes><releaseNotes>
         <description>Xamarin.Android binding Library - Mapbox NavigationUI</description>
         <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
         <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
