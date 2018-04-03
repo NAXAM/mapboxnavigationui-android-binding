@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 bin
 obj
 packages
 #*.nupkg
 *.userprefs
 .vs/
-=======
 # Autosave files
 *~
 
@@ -14,6 +12,7 @@ packages
 [Bb]in/
 packages/
 TestResults/
+tools/
 
 # globs
 Makefile.in
@@ -60,4 +59,3 @@ Btq.Login/ViewModels/LoginViewModel_LOCAL_10573.cs
 Btq.Login/ViewModels/LoginViewModel_REMOTE_10380.cs
 Btq.Login/ViewModels/LoginViewModel_REMOTE_10573.cs
 *.orig
->>>>>>> init commit
