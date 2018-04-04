@@ -1,8 +1,4 @@
-﻿using Android.Support.V7.Widget;
-using Android.Views;
-using RecyclerViewAdapter = Android.Support.V7.Widget.RecyclerView.Adapter;
-using AndroidRuntime = Android.Runtime;
-using ARE = Android.Runtime.Extensions;
+﻿using AndroidRuntime = Android.Runtime;
 using Android.OS;
 using Java.Lang;
 

@@ -113,7 +113,7 @@ var artifacts = new [] {
         },
     },
     new Artifact {
-        Version = NAV_VERSION,
+        Version = NAV_VERSION + ".1",
         NativeVersion = NAV_VERSION,
         ReleaseNotes = new string [] {
             "Mapbox NavigationUI for Android v{0}"
@@ -126,7 +126,7 @@ var artifacts = new [] {
         Dependencies = new NuSpecDependency[] {
             new NuSpecDependency {
                 Id = "Naxam.Mapbox.Droid",
-                Version = "5.5.0"
+                Version = "5.5.1.1"
             },
             new NuSpecDependency {
                 Id = "Naxam.MapboxNavigation.Droid",
@@ -153,6 +153,14 @@ var artifacts = new [] {
                 Version = "26.1.0.1"
             },
             new NuSpecDependency {
+                Id = "Xamarin.Android.Support.Design",
+                Version = "26.1.0.1"
+            },
+            new NuSpecDependency {
+                Id = "Xamarin.Android.Support.v4",
+                Version = "26.1.0.1"
+            },
+            new NuSpecDependency {
                 Id = "Xamarin.Android.Support.Constraint.Layout",
                 Version = "1.0.2.2"
             },
@@ -162,7 +170,7 @@ var artifacts = new [] {
             },
             new NuSpecDependency {
                 Id="Xbindings.MapboxLocationLayer.Droid",
-                Version="0.4.0.1"                
+                Version="0.4.0.2"                
             }
         }
     },
