@@ -12,7 +12,6 @@
     <RootNamespace>Naxam.MapboxSdkGeojson.Droid</RootNamespace>
     <AssemblyName>Naxam.MapboxSdkGeojson.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <NoWarn>CS0109,CS0108</NoWarn>
   </PropertyGroup>
