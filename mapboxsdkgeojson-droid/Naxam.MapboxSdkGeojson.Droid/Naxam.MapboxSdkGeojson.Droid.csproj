@@ -34,6 +34,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
+    <Reference Include="Naxam.MapboxSdkCore.Droid, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.4.0\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.Retrofit2.ConvertGson.Droid, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.4.0\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.11.0\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="GoogleGson">
@@ -45,17 +54,8 @@
     <Reference Include="Square.OkHttp3">
       <HintPath>..\packages\Square.OkHttp3.3.8.1\lib\MonoAndroid\Square.OkHttp3.dll</HintPath>
     </Reference>
-    <Reference Include="Naxam.SquareUp.OkHttp3.LoggingInterceptor">
-      <HintPath>..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.9.1.1\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
-    </Reference>
     <Reference Include="Square.Retrofit2">
       <HintPath>..\packages\Square.Retrofit2.2.3.0\lib\MonoAndroid\Square.Retrofit2.dll</HintPath>
-    </Reference>
-    <Reference Include="Naxam.Retrofit2.ConvertGson.Droid">
-      <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.3.0.2\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Naxam.MapboxSdkCore.Droid">
-      <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.0.0.5\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
