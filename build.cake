@@ -10,7 +10,7 @@
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 
-var VERSION = "3.4.0";
+var VERSION = "4.8.0";
 var NUGET_SUFIX = "";
 var NAV_VERSION = "0.11.1";
 
@@ -19,38 +19,38 @@ var NAV_VERSION = "0.11.1";
 //////////////////////////////////////////////////////////////////////
 
 var artifacts = new [] {
-    new Artifact {
-        Version = VERSION + NUGET_SUFIX,
-        NativeVersion = VERSION,
-        ReleaseNotes = new string [] {
-            "Mapbox for Android - SdkCore v{0}"
-        },
-        SolutionPath = "./mapboxsdkcore-droid/mapboxsdkcore-droid.sln",
-        AssemblyInfoPath = "./mapboxsdkcore-droid/Naxam.MapboxSdkCore.Droid/Properties/AssemblyInfo.cs",
-        NuspecPath = "./mapboxsdkcore-droid/mapboxsdkcore.nuspec",
-        DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-core/{0}/mapbox-sdk-core-{0}.jar",
-        JarPath = "./mapboxsdkcore-droid/Naxam.MapboxSdkCore.Droid/Jars/mapbox-sdk-core.jar",
-        Dependencies = new NuSpecDependency[] {
-                new NuSpecDependency {
-                    Id = "GoogleGson",
-                    Version = "2.8.1"
-                },
-                new NuSpecDependency {
-                    Id = "Naxam.Retrofit2.ConvertGson.Droid",
-                    Version = "2.4.0"
-                },
+    // new Artifact {
+    //     Version = VERSION + NUGET_SUFIX,
+    //     NativeVersion = VERSION,
+    //     ReleaseNotes = new string [] {
+    //         "Mapbox for Android - SdkCore v{0}"
+    //     },
+    //     SolutionPath = "./mapboxsdkcore-droid/mapboxsdkcore-droid.sln",
+    //     AssemblyInfoPath = "./mapboxsdkcore-droid/Naxam.MapboxSdkCore.Droid/Properties/AssemblyInfo.cs",
+    //     NuspecPath = "./mapboxsdkcore-droid/mapboxsdkcore.nuspec",
+    //     DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-core/{0}/mapbox-sdk-core-{0}.jar",
+    //     JarPath = "./mapboxsdkcore-droid/Naxam.MapboxSdkCore.Droid/Jars/mapbox-sdk-core.jar",
+    //     Dependencies = new NuSpecDependency[] {
+    //             new NuSpecDependency {
+    //                 Id = "GoogleGson",
+    //                 Version = "2.8.5"
+    //             },
+    //             new NuSpecDependency {
+    //                 Id = "Naxam.Retrofit2.ConvertGson.Droid",
+    //                 Version = "2.4.0"
+    //             },
                   
-                new NuSpecDependency {
-                    Id = "Naxam.SquareUp.OkHttp3.LoggingInterceptor",
-                    Version = "3.11.0"
-                },
-                new NuSpecDependency {
-                    Id = "Square.Retrofit2",
-                    Version = "2.3.0"
-                }
+    //             new NuSpecDependency {
+    //                 Id = "Naxam.SquareUp.OkHttp3.LoggingInterceptor",
+    //                 Version = "3.11.0"
+    //             },
+    //             new NuSpecDependency {
+    //                 Id = "Square.Retrofit2",
+    //                 Version = "2.3.0"
+    //             }
 
-        }
-    },
+    //     }
+    // },
     new Artifact {
         Version = VERSION + NUGET_SUFIX,
         NativeVersion = VERSION,
@@ -63,48 +63,48 @@ var artifacts = new [] {
         DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-geojson/{0}/mapbox-sdk-geojson-{0}.jar",
         JarPath = "./mapboxsdkgeojson-droid/Naxam.MapboxSdkGeojson.Droid/Jars/mapbox-sdk-geojson.jar",
         Dependencies = new NuSpecDependency[] {
-            new NuSpecDependency {
-                Id = "Naxam.MapboxSdkCore.Droid",
-                Version = VERSION + NUGET_SUFIX
-            }
+            // new NuSpecDependency {
+            //     Id = "Naxam.MapboxSdkCore.Droid",
+            //     Version = VERSION + NUGET_SUFIX
+            // }
         }
     },
-    new Artifact {
-        Version = VERSION + NUGET_SUFIX,
-        NativeVersion = VERSION,
-        ReleaseNotes = new string [] {
-            "Mapbox for Android - SdkTurf v{0}"
-        },
-        SolutionPath = "./mapboxsdkturf-droid/mapboxsdkturf-droid.sln",
-        AssemblyInfoPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Properties/AssemblyInfo.cs",
-        NuspecPath = "./mapboxsdkturf-droid/mapboxsdkturf.nuspec",
-        DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-turf/{0}/mapbox-sdk-turf-{0}.jar",
-        JarPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Jars/mapbox-sdk-turf.jar",
-        Dependencies = new NuSpecDependency[] {
-            new NuSpecDependency {
-                Id = "Naxam.MapboxSdkGeojson.Droid",
-                Version = VERSION + NUGET_SUFIX
-            }
-        }
-    },
-    new Artifact {
-        Version = VERSION + NUGET_SUFIX,
-        NativeVersion = VERSION,
-        ReleaseNotes = new string [] {
-            "Mapbox for Android - SdkService v{0}"
-        },
-        SolutionPath = "./mapboxsdkservice-droid/mapboxsdkservice-droid.sln",
-        AssemblyInfoPath = "./mapboxsdkservice-droid/Naxam.MapboxSdkServices.Droid/Properties/AssemblyInfo.cs",
-        NuspecPath = "./mapboxsdkservice-droid/mapboxsdkservice.nuspec",
-        DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-services/{0}/mapbox-sdk-services-{0}.jar",
-        JarPath = "./mapboxsdkservice-droid/Naxam.MapboxSdkServices.Droid/Jars/mapbox-sdk-services.jar",
-        Dependencies = new NuSpecDependency[] {
-            new NuSpecDependency {
-                Id = "Naxam.MapboxSdkGeojson.Droid",
-                Version = VERSION + NUGET_SUFIX
-            }
-        }
-    },
+    // new Artifact {
+    //     Version = VERSION + NUGET_SUFIX,
+    //     NativeVersion = VERSION,
+    //     ReleaseNotes = new string [] {
+    //         "Mapbox for Android - SdkTurf v{0}"
+    //     },
+    //     SolutionPath = "./mapboxsdkturf-droid/mapboxsdkturf-droid.sln",
+    //     AssemblyInfoPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Properties/AssemblyInfo.cs",
+    //     NuspecPath = "./mapboxsdkturf-droid/mapboxsdkturf.nuspec",
+    //     DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-turf/{0}/mapbox-sdk-turf-{0}.jar",
+    //     JarPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Jars/mapbox-sdk-turf.jar",
+    //     Dependencies = new NuSpecDependency[] {
+    //         new NuSpecDependency {
+    //             Id = "Naxam.MapboxSdkGeojson.Droid",
+    //             Version = VERSION + NUGET_SUFIX
+    //         }
+    //     }
+    // },
+    // new Artifact {
+    //     Version = VERSION + NUGET_SUFIX,
+    //     NativeVersion = VERSION,
+    //     ReleaseNotes = new string [] {
+    //         "Mapbox for Android - SdkService v{0}"
+    //     },
+    //     SolutionPath = "./mapboxsdkservice-droid/mapboxsdkservice-droid.sln",
+    //     AssemblyInfoPath = "./mapboxsdkservice-droid/Naxam.MapboxSdkServices.Droid/Properties/AssemblyInfo.cs",
+    //     NuspecPath = "./mapboxsdkservice-droid/mapboxsdkservice.nuspec",
+    //     DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-services/{0}/mapbox-sdk-services-{0}.jar",
+    //     JarPath = "./mapboxsdkservice-droid/Naxam.MapboxSdkServices.Droid/Jars/mapbox-sdk-services.jar",
+    //     Dependencies = new NuSpecDependency[] {
+    //         new NuSpecDependency {
+    //             Id = "Naxam.MapboxSdkGeojson.Droid",
+    //             Version = VERSION + NUGET_SUFIX
+    //         }
+    //     }
+    // },
     // new Artifact {
     //     Version = NAV_VERSION,
     //     NativeVersion = NAV_VERSION,
@@ -240,7 +240,10 @@ Task("Pack")
 {
     foreach(var artifact in artifacts) {
         NuGetRestore(artifact.SolutionPath);
-        MSBuild(artifact.SolutionPath, settings => settings.SetConfiguration(configuration));
+        MSBuild(artifact.SolutionPath, settings => {
+            settings.ToolVersion = MSBuildToolVersion.VS2019;
+            settings.SetConfiguration(configuration);
+        });
         NuGetPack(artifact.NuspecPath, new NuGetPackSettings {
             Version = artifact.Version,
             Dependencies = artifact.Dependencies,
