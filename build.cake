@@ -51,42 +51,42 @@ var artifacts = new [] {
 
     //     }
     // },
-    new Artifact {
-        Version = VERSION + NUGET_SUFIX,
-        NativeVersion = VERSION,
-        ReleaseNotes = new string [] {
-            "Mapbox for Android - SdkGeoJSON v{0}"
-        },
-        SolutionPath = "./mapboxsdkgeojson-droid/MapboxSdkGeojson-Droid.sln",
-        AssemblyInfoPath = "./mapboxsdkgeojson-droid/Naxam.MapboxSdkGeojson.Droid/Properties/AssemblyInfo.cs",
-        NuspecPath = "./mapboxsdkgeojson-droid/mapboxsdkgeojson.nuspec",
-        DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-geojson/{0}/mapbox-sdk-geojson-{0}.jar",
-        JarPath = "./mapboxsdkgeojson-droid/Naxam.MapboxSdkGeojson.Droid/Jars/mapbox-sdk-geojson.jar",
-        Dependencies = new NuSpecDependency[] {
-            // new NuSpecDependency {
-            //     Id = "Naxam.MapboxSdkCore.Droid",
-            //     Version = VERSION + NUGET_SUFIX
-            // }
-        }
-    },
     // new Artifact {
     //     Version = VERSION + NUGET_SUFIX,
     //     NativeVersion = VERSION,
     //     ReleaseNotes = new string [] {
-    //         "Mapbox for Android - SdkTurf v{0}"
+    //         "Mapbox for Android - SdkGeoJSON v{0}"
     //     },
-    //     SolutionPath = "./mapboxsdkturf-droid/mapboxsdkturf-droid.sln",
-    //     AssemblyInfoPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Properties/AssemblyInfo.cs",
-    //     NuspecPath = "./mapboxsdkturf-droid/mapboxsdkturf.nuspec",
-    //     DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-turf/{0}/mapbox-sdk-turf-{0}.jar",
-    //     JarPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Jars/mapbox-sdk-turf.jar",
+    //     SolutionPath = "./mapboxsdkgeojson-droid/MapboxSdkGeojson-Droid.sln",
+    //     AssemblyInfoPath = "./mapboxsdkgeojson-droid/Naxam.MapboxSdkGeojson.Droid/Properties/AssemblyInfo.cs",
+    //     NuspecPath = "./mapboxsdkgeojson-droid/mapboxsdkgeojson.nuspec",
+    //     DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-geojson/{0}/mapbox-sdk-geojson-{0}.jar",
+    //     JarPath = "./mapboxsdkgeojson-droid/Naxam.MapboxSdkGeojson.Droid/Jars/mapbox-sdk-geojson.jar",
     //     Dependencies = new NuSpecDependency[] {
-    //         new NuSpecDependency {
-    //             Id = "Naxam.MapboxSdkGeojson.Droid",
-    //             Version = VERSION + NUGET_SUFIX
-    //         }
+    //         // new NuSpecDependency {
+    //         //     Id = "Naxam.MapboxSdkCore.Droid",
+    //         //     Version = VERSION + NUGET_SUFIX
+    //         // }
     //     }
     // },
+    new Artifact {
+        Version = VERSION + NUGET_SUFIX,
+        NativeVersion = VERSION,
+        ReleaseNotes = new string [] {
+            "Mapbox for Android - SdkTurf v{0}"
+        },
+        SolutionPath = "./mapboxsdkturf-droid/mapboxsdkturf-droid.sln",
+        AssemblyInfoPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Properties/AssemblyInfo.cs",
+        NuspecPath = "./mapboxsdkturf-droid/mapboxsdkturf.nuspec",
+        DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-turf/{0}/mapbox-sdk-turf-{0}.jar",
+        JarPath = "./mapboxsdkturf-droid/Naxam.MapboxSdkTurf.Droid/Jars/mapbox-sdk-turf.jar",
+        Dependencies = new NuSpecDependency[] {
+            new NuSpecDependency {
+                Id = "Naxam.MapboxSdkGeojson.Droid",
+                Version = VERSION + NUGET_SUFIX
+            }
+        }
+    },
     // new Artifact {
     //     Version = VERSION + NUGET_SUFIX,
     //     NativeVersion = VERSION,
