@@ -66,6 +66,35 @@ namespace Com.Mapbox.Geojson.Gson
 
 namespace Com.Mapbox.Geojson.Gson
 {
+    partial class CoordinateTypeAdapter 
+    {
+        public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+        {
+            var result = ReadCoordinate(p0);
+            var handle = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle(result);
+
+            return new Java.Lang.Object(handle, JniHandleOwnership.TransferLocalRef);
+        }
+
+        public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+        {
+            Write(p0, global::Android.Runtime.JavaList<global::Java.Lang.Double>.FromJniHandle(p1.Handle, JniHandleOwnership.TransferLocalRef));
+        }
+    }
+
+    partial class BoundingBoxTypeAdapter
+    {
+        public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+        {
+            return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadBoundingBox(p0));
+        }
+
+        public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+        {
+            Write(p0, p1 as global::Com.Mapbox.Geojson.BoundingBox);
+        }
+    }
+
     partial class GeometryTypeAdapter
     {
         public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
@@ -82,70 +111,160 @@ namespace Com.Mapbox.Geojson.Gson
 
 namespace Com.Mapbox.Geojson {
 
+    //partial class PointAsCoordinatesTypeAdapter 
+    //{
+    //    //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+    //    //{
+    //    //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadPoint(p0));
+    //    //}
+    //}
 
-    abstract partial class MultiLineString : ICoordinateContainer
+    partial class Feature
     {
-        Java.Lang.Object ICoordinateContainer.Coordinates()
+        partial class GsonTypeAdapter
         {
-            var coords = Coordinates().ToArray();
-            var jlist = Android.Runtime.JavaList.FromArray(coords);
+            public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+            {
+                return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadFeature(p0));
+            }
 
-            return jlist;
+            //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+            //{
+            //    Write(p0, p1 as Com.Mapbox.Geojson.Feature);
+            //}
         }
     }
 
-	partial class LineString : ICoordinateContainer
+    partial class FeatureCollection
     {
-        Java.Lang.Object ICoordinateContainer.Coordinates()
+        partial class GsonTypeAdapter
         {
-            var coords = Coordinates().ToArray();
-            var jlist = Android.Runtime.JavaList.FromArray(coords);
+            public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+            {
+                return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadFeatureCollection(p0));
+            }
 
-            return jlist;
-        }
-	}
-
-	partial class MultiPoint : ICoordinateContainer
-    {
-        Java.Lang.Object ICoordinateContainer.Coordinates()
-        {
-            var coords = Coordinates().ToArray();
-            var jlist = Android.Runtime.JavaList.FromArray(coords);
-
-            return jlist;
-        }
-	}
-
-	partial class Polygon : ICoordinateContainer
-    {
-        Java.Lang.Object ICoordinateContainer.Coordinates()
-        {
-            var coords = Coordinates().ToArray();
-            var jlist = Android.Runtime.JavaList.FromArray(coords);
-
-            return jlist;
-        }
-	}
-
-	partial class MultiPolygon : ICoordinateContainer
-    {
-        Java.Lang.Object ICoordinateContainer.Coordinates()
-        {
-            var coords = Coordinates().ToArray();
-            var jlist = Android.Runtime.JavaList.FromArray(coords);
-
-            return jlist;
-        }
-	}
-
-	partial class Point : ICoordinateContainer
-    {
-        Java.Lang.Object ICoordinateContainer.Coordinates()
-        {
-            var coords = Coordinates().ToArray();
-            var jlist = Android.Runtime.JavaList.FromArray(coords);
-
-            return jlist;
+            //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+            //{
+            //    Write(p0, p1 as Com.Mapbox.Geojson.FeatureCollection);
+            //}
         }
     }
+
+    partial class GeometryCollection
+    {
+        partial class GsonTypeAdapter
+        {
+            public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+            {
+                return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadGeometryCollection(p0));
+            }
+
+            //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+            //{
+            //    Write(p0, p1 as Com.Mapbox.Geojson.GeometryCollection);
+            //}
+        }
+    }
+ //   partial class MultiLineString
+ //   {
+
+ //       partial class GsonTypeAdapter
+ //       {
+ //           //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+ //           //{
+ //           //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadMultiLineString(p0));
+ //           //}
+
+ //           //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+ //           //{
+ //           //    Write(p0, p1 as Com.Mapbox.Geojson.MultiLineString);
+ //           //}
+ //       }
+ //   }
+
+ //   partial class LineString
+ //   {
+
+ //       partial class GsonTypeAdapter
+ //       {
+ //           //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+ //           //{
+ //           //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadLineString(p0));
+ //           //}
+
+ //           //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+ //           //{
+ //           //    Write(p0, p1 as Com.Mapbox.Geojson.LineString);
+ //           //}
+ //       }
+ //   }
+
+	//partial class MultiPoint
+ //   {
+
+ //       partial class GsonTypeAdapter
+ //       {
+ //           //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+ //           //{
+ //           //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadMultiPoint(p0));
+ //           //}
+
+ //           //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+ //           //{
+ //           //    Write(p0, p1 as Com.Mapbox.Geojson.MultiPoint);
+ //           //}
+ //       }
+ //   }
+
+	//partial class Polygon
+ //   {
+
+ //       partial class GsonTypeAdapter
+ //       {
+ //           //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+ //           //{
+ //           //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadPolygon(p0));
+ //           //}
+
+ //           //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+ //           //{
+ //           //    Write(p0, p1 as Com.Mapbox.Geojson.Polygon);
+ //           //}
+ //       }
+ //   }
+
+	//partial class MultiPolygon
+ //   {
+
+ //       partial class GsonTypeAdapter
+ //       {
+ //           //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+ //           //{
+ //           //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadMultiPolygon(p0));
+ //           //}
+
+ //           //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+ //           //{
+ //           //    Write(p0, p1 as Com.Mapbox.Geojson.MultiPolygon);
+ //           //}
+ //       }
+ //   }
+
+	//partial class Point
+ //   {
+
+ //       partial class GsonTypeAdapter
+ //       {
+ //           //public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
+ //           //{
+ //           //    return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadPoint(p0));
+ //           //}
+
+ //           //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+ //           //{
+ //           //    Write(p0, p1 as Com.Mapbox.Geojson.Point);
+ //           //}
+ //       }
+ //   }
 }
