@@ -63,10 +63,10 @@ var artifacts = new [] {
         DownloadUrl = "http://central.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-geojson/{0}/mapbox-sdk-geojson-{0}.jar",
         JarPath = "./mapboxsdkgeojson-droid/Naxam.MapboxSdkGeojson.Droid/Jars/mapbox-sdk-geojson.jar",
         Dependencies = new NuSpecDependency[] {
-            new NuSpecDependency {
-                Id = "Naxam.MapboxSdkCore.Droid",
-                Version = VERSION + NUGET_SUFIX
-            }
+            // new NuSpecDependency {
+            //     Id = "Naxam.MapboxSdkCore.Droid",
+            //     Version = VERSION + NUGET_SUFIX
+            // }
         }
     },
     // new Artifact {
