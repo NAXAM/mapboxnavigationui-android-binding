@@ -1,7 +1,10 @@
 ﻿using Android.Runtime;
 using GoogleGson;
+using Java.Interop;
+using Java.Lang;
 using Java.Lang.Reflect;
-
+using System;
+using System.Collections.Generic;
 
 namespace Com.Mapbox.Geojson.Gson
 {
@@ -158,8 +161,22 @@ namespace Com.Mapbox.Geojson
             //}
         }
     }
-    partial class MultiLineString
+    partial class MultiLineString : ICoordinateContainer
     {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var points = Coordinates();
+
+            IntPtr native_p0 = JavaList<IList<Point>>.ToLocalJniHandle(points);
+            try
+            {
+                return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
+            }
+            finally
+            {
+                JNIEnv.DeleteLocalRef(native_p0);
+            }
+        }
 
         partial class GsonTypeAdapter
         {
@@ -175,8 +192,22 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-    partial class LineString
+    partial class LineString : ICoordinateContainer
     {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var points = Coordinates();
+
+            IntPtr native_p0 = JavaList<Point>.ToLocalJniHandle(points);
+            try
+            {
+                return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
+            }
+            finally
+            {
+                JNIEnv.DeleteLocalRef(native_p0);
+            }
+        }
 
         partial class GsonTypeAdapter
         {
@@ -192,8 +223,22 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class MultiPoint
+	partial class MultiPoint : ICoordinateContainer
     {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var points = Coordinates();
+
+            IntPtr native_p0 = JavaList<Point>.ToLocalJniHandle(points);
+            try
+            {
+                return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
+            }
+            finally
+            {
+                JNIEnv.DeleteLocalRef(native_p0);
+            }
+        }
 
         partial class GsonTypeAdapter
         {
@@ -209,8 +254,22 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class Polygon
+	partial class Polygon : ICoordinateContainer
     {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var points = Coordinates();
+
+            IntPtr native_p0 = JavaList<IList<Point>>.ToLocalJniHandle(points);
+            try
+            {
+                return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
+            }
+            finally
+            {
+                JNIEnv.DeleteLocalRef(native_p0);
+            }
+        }
 
         partial class GsonTypeAdapter
         {
@@ -226,8 +285,22 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class MultiPolygon
+	partial class MultiPolygon : ICoordinateContainer
     {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var points = Coordinates();
+
+            IntPtr native_p0 = JavaList<IList<IList<Point>>>.ToLocalJniHandle(points);
+            try
+            {
+                return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
+            }
+            finally
+            {
+                JNIEnv.DeleteLocalRef(native_p0);
+            }
+        }
 
         partial class GsonTypeAdapter
         {
@@ -243,8 +316,22 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class Point
+	partial class Point : ICoordinateContainer
     {
+        Java.Lang.Object ICoordinateContainer.Coordinates()
+        {
+            var points = Coordinates();
+
+            IntPtr native_p0 = JavaList<Java.Lang.Double>.ToLocalJniHandle(points);
+            try
+            {
+                return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
+            }
+            finally
+            {
+                JNIEnv.DeleteLocalRef(native_p0);
+            }
+        }
 
         partial class GsonTypeAdapter
         {

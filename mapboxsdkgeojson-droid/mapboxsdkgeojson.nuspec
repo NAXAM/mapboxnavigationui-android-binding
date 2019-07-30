@@ -16,7 +16,7 @@
         <copyright>Copyright (c) 2017 NAXAM</copyright>
         <tags>xamarin, Xamarin.Android, Mapbox, mapbox-sdk-core, mapboxsdkcore</tags>
         <dependencies>
-            <dependency id="Naxam.MapboxSdkCore.Droid" version="3.0.0.2" />
+            <dependency id="GoogleGson" version="2.8.5" />
         </dependencies>
     </metadata>
     <files>
