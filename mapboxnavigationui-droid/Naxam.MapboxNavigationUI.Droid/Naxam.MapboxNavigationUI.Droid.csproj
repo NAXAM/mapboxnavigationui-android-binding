@@ -72,7 +72,7 @@
       <HintPath>..\packages\Naxam.SquareUp.OkHttp3.LoggingInterceptor.3.9.1.1\lib\MonoAndroid10\Naxam.SquareUp.OkHttp3.LoggingInterceptor.dll</HintPath>
     </Reference>
     <Reference Include="Square.Retrofit2">
-      <HintPath>..\packages\Square.Retrofit2.2.3.0\lib\MonoAndroid\Square.Retrofit2.dll</HintPath>
+      <HintPath>..\packages\Square.Retrofit2.2.4.0.1\lib\MonoAndroid\Square.Retrofit2.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.Retrofit2.ConvertGson.Droid">
       <HintPath>..\packages\Naxam.Retrofit2.ConvertGson.Droid.2.3.0.2\lib\MonoAndroid10\Naxam.Retrofit2.ConvertGson.Droid.dll</HintPath>

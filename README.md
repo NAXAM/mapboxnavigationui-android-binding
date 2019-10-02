@@ -18,7 +18,13 @@ We specialize in developing mobile applications using Xamarin and native technol
 Install-Package Naxam.MapboxNavigationUI.Droid
 ```
 
-NOTE: In the mean time, packages for Android.Arch.Core.Runtime and Android.Arch.Lifetime.Extensions aren't published by Xamarin yet. Plz add a nuget source to https://www.myget.org/F/xbindings/api/v3/index.json either directly in `Visual Studio Nuget Packages Source` or via `nuget.config` file.
+## Upgrade
+
+1. Change appropriate version and dependencies
+2. After successful compilation, run this command to pack Nuget packages
+```
+sh build.sh --settings_skipverification=true
+```
 
 ## Usage
 
