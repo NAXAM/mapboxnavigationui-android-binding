@@ -137,7 +137,7 @@
       <HintPath>..\packages\Naxam.Mapbox.Services.Droid.2.2.9.1\lib\MonoAndroid10\Naxam.MapboxServices.Java.dll</HintPath>
     </Reference>
     <Reference Include="Square.Retrofit2">
-      <HintPath>..\packages\Square.Retrofit2.2.3.0\lib\MonoAndroid\Square.Retrofit2.dll</HintPath>
+      <HintPath>..\packages\Square.Retrofit2.2.4.0.1\lib\MonoAndroid\Square.Retrofit2.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.MapboxSdkCore.Droid">
       <HintPath>..\packages\Naxam.MapboxSdkCore.Droid.3.0.0.2\lib\MonoAndroid10\Naxam.MapboxSdkCore.Droid.dll</HintPath>
