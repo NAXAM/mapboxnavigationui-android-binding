@@ -60,7 +60,7 @@ namespace Com.Mapbox.Geojson.Gson
 
 namespace Com.Mapbox.Geojson.Gson
 {
-    partial class CoordinateTypeAdapter 
+    partial class CoordinateTypeAdapter
     {
         public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
         {
@@ -106,12 +106,17 @@ namespace Com.Mapbox.Geojson.Gson
 namespace Com.Mapbox.Geojson
 {
 
-    partial class PointAsCoordinatesTypeAdapter 
+    partial class PointAsCoordinatesTypeAdapter
     {
         public override unsafe Java.Lang.Object Read(global::GoogleGson.Stream.JsonReader p0)
         {
             return Android.Runtime.Extensions.JavaCast<Java.Lang.Object>(ReadPoint(p0));
         }
+
+        //public override unsafe void Write(global::GoogleGson.Stream.JsonWriter p0, Java.Lang.Object p1)
+        //{
+        //    Write(p0, p1 as Com.Mapbox.Geojson.Point);
+        //}
     }
 
     partial class Feature
@@ -168,12 +173,10 @@ namespace Com.Mapbox.Geojson
             var points = Coordinates();
 
             IntPtr native_p0 = JavaList<IList<Point>>.ToLocalJniHandle(points);
-            try
-            {
+            try {
                 return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
             }
-            finally
-            {
+            finally {
                 JNIEnv.DeleteLocalRef(native_p0);
             }
         }
@@ -199,12 +202,10 @@ namespace Com.Mapbox.Geojson
             var points = Coordinates();
 
             IntPtr native_p0 = JavaList<Point>.ToLocalJniHandle(points);
-            try
-            {
+            try {
                 return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
             }
-            finally
-            {
+            finally {
                 JNIEnv.DeleteLocalRef(native_p0);
             }
         }
@@ -223,19 +224,17 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class MultiPoint : ICoordinateContainer
+    partial class MultiPoint : ICoordinateContainer
     {
         Java.Lang.Object ICoordinateContainer.Coordinates()
         {
             var points = Coordinates();
 
             IntPtr native_p0 = JavaList<Point>.ToLocalJniHandle(points);
-            try
-            {
+            try {
                 return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
             }
-            finally
-            {
+            finally {
                 JNIEnv.DeleteLocalRef(native_p0);
             }
         }
@@ -254,19 +253,17 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class Polygon : ICoordinateContainer
+    partial class Polygon : ICoordinateContainer
     {
         Java.Lang.Object ICoordinateContainer.Coordinates()
         {
             var points = Coordinates();
 
             IntPtr native_p0 = JavaList<IList<Point>>.ToLocalJniHandle(points);
-            try
-            {
+            try {
                 return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
             }
-            finally
-            {
+            finally {
                 JNIEnv.DeleteLocalRef(native_p0);
             }
         }
@@ -285,19 +282,17 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class MultiPolygon : ICoordinateContainer
+    partial class MultiPolygon : ICoordinateContainer
     {
         Java.Lang.Object ICoordinateContainer.Coordinates()
         {
             var points = Coordinates();
 
             IntPtr native_p0 = JavaList<IList<IList<Point>>>.ToLocalJniHandle(points);
-            try
-            {
+            try {
                 return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
             }
-            finally
-            {
+            finally {
                 JNIEnv.DeleteLocalRef(native_p0);
             }
         }
@@ -316,19 +311,17 @@ namespace Com.Mapbox.Geojson
         }
     }
 
-	partial class Point : ICoordinateContainer
+    partial class Point : ICoordinateContainer
     {
         Java.Lang.Object ICoordinateContainer.Coordinates()
         {
             var points = Coordinates();
 
             IntPtr native_p0 = JavaList<Java.Lang.Double>.ToLocalJniHandle(points);
-            try
-            {
+            try {
                 return new Java.Lang.Object(native_p0, JniHandleOwnership.DoNotRegister);
             }
-            finally
-            {
+            finally {
                 JNIEnv.DeleteLocalRef(native_p0);
             }
         }

@@ -11,7 +11,7 @@ using Android.App;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NAXAM CO.,LTD")]
 [assembly: AssemblyProduct("XBindings")]
-[assembly: AssemblyCopyright("Copyright © NAXAM 2017")]
+[assembly: AssemblyCopyright("Copyright © NAXAM 2019")]
 [assembly: AssemblyTrademark("NAXAM")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
@@ -25,5 +25,5 @@ using Android.App;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("4.9.0.0")]
-[assembly: AssemblyVersion("4.9.0.0")]
+// [assembly: AssemblyVersion("4.9.0.1")]
+[assembly: AssemblyVersion("4.9.0.1")]
